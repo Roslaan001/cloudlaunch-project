@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Powered Agriculture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+
+    body {
+      overflow: hidden; /* Prevent scrolling */
+    }
+  </style>
+</head>
+<body id="main-body" class="text-white font-sans h-screen flex flex-col items-center justify-center transition-colors duration-500">
+
+  <!-- Content Container -->
+  <div class="w-full max-w-6xl px-6 h-full flex flex-col justify-center space-y-6 text-center">
+
+    <!-- Title Section -->
+    <div class="animate-fade-in">
+      <h1 class="text-4xl font-bold text-cyan-400 mb-1">The Future of AI-Powered Agriculture <br>(Agric-Tech)</h1>
+      <h2 class="text-2xl font-semibold mb-1">ABDULWAHAB ABDULSOMAD OLAYIWOLA</h2>
+      <p class="text-md text-gray-300">Senior Cloud Security Engineer</p>
+    </div>
+
+    <!-- Pitch + Bio Side-by-Side -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 h-[40%] px-2 md:px-6 py-4 animate-fade-in">
+
+
+      <!-- Pitch -->
+      <div id="pitch-box" class="rounded-xl p-6 flex items-center justify-center text-white text-left shadow-lg overflow-auto">
+        <div>
+          <h3 class="text-xl font-bold text-yellow-300 mb-2">PITCHING</h3> <hr>
+          <p class="text-sm leading-relaxed">
+            <p class="text-base md:text-lg leading-relaxed">
+              Hello, I'm <strong class="text-yellow-300">Abdulwahab Abdulsomad Olayiwola</strong>, a Senior Cloud Security Engineer. Our startup is revolutionizing agriculture by using AI to optimize delivery routes, predict crop prices, detect plant and animal diseases, and provide smart treatment and prevention — tackling key agricultural challenges in underserved rural areas.
+        </p>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div id="bio-box" class="rounded-xl p-6 flex items-center justify-center text-white text-left shadow-lg overflow-auto">
+        <div>
+          <h3 class="text-xl font-bold text-green-300 mb-2">ABOUT ME AND CERTIFICATIONS</h3> <hr>
+          <p class="text-base md:text-lg leading-relaxed">
+             With an ample background in Agriculture, DevOps, and cloud platforms (AWS & Azure). I've led scalable enterprise-grade app deployments and hold a B.Sc. in Agricultural Science and Education, along with certifications in AWS, Jenkins, Linux, Docker, Kubernetes, Cloud Security and Infrastructure as Code.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <p class="italic text-sm text-gray-300 animate-fade-in">
+      Invest in the smarter future of Agriculture (Agri-Tech).
+    </p>
+    <p class="italic text-sm text-gray-300 animate-fade-in">
+      Roslaan @ 2025. All rights reserved.
+    </p>
+    
+  </div>
+
+  <!-- JavaScript for Dynamic Backgrounds -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const pageColors = [
+  "#1f2937", // slate-800
+  "#1a202c", // gray-900
+  "#2d3748", // gray-800
+  "#22303c", // muted teal
+  "#2c3e50", // dark blue-gray
+  "#191d24", // jet black
+  "#2f343f", // deep steel
+  "#1e242c"  // dark charcoal blue
+];
+
+      const boxColors = [
+  "#2e2e2e",  // charcoal
+  "#3b3b3b",  // dark gray
+  "#1e3a8a",  // deep blue
+  "#065f46",  // forest green
+  "#3a3f5a",  // slate
+  "#2f3136",  // obsidian
+  "#4b5563"   // cool gray
+];
+
+      // Set background color for full page
+      const randomPageColor = pageColors[Math.floor(Math.random() * pageColors.length)];
+      document.getElementById("main-body").style.backgroundColor = randomPageColor;
+
+      // Set unique random background colors for pitch and bio
+      const used = new Set();
+      function getUniqueColor() {
+        let color;
+        do {
+          color = boxColors[Math.floor(Math.random() * boxColors.length)];
+        } while (used.has(color));
+        used.add(color);
+        return color;
+      }
+
+      document.getElementById("pitch-box").style.backgroundColor = getUniqueColor();
+      document.getElementById("bio-box").style.backgroundColor = getUniqueColor();
+    });
+  </script>
+</body>
+</html>
