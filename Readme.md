@@ -154,7 +154,18 @@ Design and configure a secure, logically separated VPC for future application an
   - VPC  
   - Subnets  
   - Route Tables  
-  - Security Groups  
+  - Security Groups 
+
+
+  ![Image of VPC and its component, s3 buckets and cloudfront distribution](/images/Screenshot%202025-08-29%20102930.png) 
+
+  ![Image of VPC and its component, s3 buckets and cloudfront distribution](/images/Screenshot%202025-08-29%20102947.png)
+
+  ![Image of VPC and its component, s3 buckets and cloudfront distribution](/images/Screenshot%202025-08-29%20103046.png) 
+
+  ![Image of VPC and its component, s3 buckets and cloudfront distribution](/images/Screenshot%202025-08-29%20103102.png) 
+
+  ![Image of VPC and its component, s3 buckets and cloudfront distribution](/images/Screenshot%202025-08-29%20103143.png) 
 
 ---
 > N.B: Some/ all of these resources might be taken down soon as my AWS account is no longer a free tier account. Thanks
