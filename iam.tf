@@ -19,20 +19,29 @@ resource "aws_iam_policy" "user_custom_policy" {
 
   policy = jsonencode({
     Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Action = [
-          "s3:ListBucket",
-          "s3:GetObject",
-          "s3:PutObject"
+    "Statement": [
+    {
+        "Action": [
+            "s3:ListBucket"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::cloudlaunch-private-bucket-roslaan-001",
+            "arn:aws:s3:::cloudlaunch-site-bucket-roslaan-001",
+            "arn:aws:s3:::cloudlaunch-visible-only-bucket-roslaan-001"
         ]
-        Resource = [
-          "arn:aws:s3:::cloudlaunch-private-bucket-roslaan-001/*",
-          "arn:aws:s3:::cloudlaunch-private-bucket-roslaan-001/*",
-          "arn:aws:s3:::cloudlaunch-site-bucket-roslaan-001/*"
+    },
+    {
+        "Action": [
+            "s3:GetObject",
+            "s3:PutObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::cloudlaunch-private-bucket-roslaan-001/*",
+            "arn:aws:s3:::cloudlaunch-site-bucket-roslaan-001/*"
         ]
-      },
+    },
       {
         Effect   = "Allow"
         Action   = ["ec2:Describe*"]
